@@ -1,0 +1,85 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+@mixin flexBetwenn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ @mixin flexColumn{
+     display: flex;
+     flex-direction: column;
+     gap:10px;
+ }
+
+  @mixin flexRow{
+     display: flex;
+     flex-direction: row;
+     gap:10px;
+ }
+ @mixin vertical-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ @mixin first-box-shadows {
+     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px , rgba(0, 0, 0, 0.23) 0px, 6px, 6px;
+ }
+
+ @mixin box-shadows-hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px , rgba(0, 0, 0, 0.50) 0px, 6px, 6px;
+}
+@mixin heart-icon {
+    .empty {
+        font-size: 1.5rem;
+        transition: all .5s;
+    }
+    .full {
+        font-size: 1.5rem;
+        transition: all .5s;
+        opacity: 0;
+        background: linear-gradient($colour-primary, $colour-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &:hover {
+        > .empty {
+            opacity: 0;
+        }
+        >.full {
+            opacity: 1;
+        }
+    }
+}
+
+
+@mixin button {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 15px;
+    width: 220px;
+    color: $white;
+    background: linear-gradient(to top left, $colour-primary, $colour-secondary);
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    @include first-box-shadows;
+    cursor: pointer;
+
+    &:hover {
+    @include box-shadows-hover;
+    opacity: 0.85;
+    }
+}
+

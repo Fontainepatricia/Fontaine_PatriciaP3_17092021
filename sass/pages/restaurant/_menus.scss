@@ -1,0 +1,180 @@
+//menu image
+.menu-image {
+    width: 100%;
+    height: 280px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 280px;
+    }
+}
+.restaurant-menu {
+
+    padding: 25px;
+    background-color: $backbleu;
+    position: relative;
+    border-radius: 35px 35px 0 0;
+    transform: translateY(-35px);
+    margin-bottom: -35px;
+    overflow: hidden;
+
+    .heart-icon {
+        @include heart-icon;
+
+        .empty, 
+        .full {
+            position: absolute;
+            top: 25px;
+            right: 45px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .restaurant-menu_title {
+        font-family: $logo-title-font;
+        font-style: italic;
+        margin-bottom: 25px;
+    }
+    .restaurant-menu-bloc{
+        @include flexRow;
+        justify-content: space-between;
+        @media screen and (max-width: 992px) {
+            @include flexBetwenn;
+            flex-direction: column;
+            gap:5%;
+        }
+        .restaurant-menu-bloc-type{
+                @include flexColumn;
+
+                width: 30%;
+                @media screen and (max-width:  992px) {
+                    
+                    width: 100%;
+                   
+                }
+     
+    .restaurant-menu_part-title {
+        font-weight: 300;
+        padding-bottom: 3px;
+    }
+    .line{
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        .green-line {
+            width: 45px;
+            color: $colour-tertiary;
+            border: none;
+            border-top: solid 2px $colour-tertiary;
+            display: flex;
+            unicode-bidi: isolate;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            overflow: hidden;
+        }
+    }
+}
+}
+.command_link {
+    @include button;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}    
+
+}
+// restaurant menu article
+
+.menu-item {
+    background-color: $white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    @include first-box-shadows;
+    cursor: pointer;
+    transition: 5s;
+    width:100%;
+    overflow: hidden;
+    
+    
+            /*Décallage de l'animation pour chaque éléments de la liste*/
+            @for $i from 1 through 15 {
+                &:nth-child(#{$i}) {
+                    animation: fade-in 1s .1s*($i - 1) ease-out forwards;
+                }
+            }
+            @keyframes fade-in {
+                0%{
+                    opacity:0;
+                    transform: translateY(100px);
+                }
+                100%{
+                    opacity:1;
+                    transform: translateY(0px);
+                }
+            }
+
+
+    .legende{
+
+        @include flexColumn;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 10px;
+
+     &_content {
+        font-weight: 300;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+       }
+    }
+    .menu-item_price {
+        font-weight: bold;
+        width: 50px;
+       align-self: flex-end;
+       white-space: nowrap;
+       padding-bottom: 5px;
+
+    }
+    
+    .hover-item {
+        color: white;
+        background-color: $colour-tertiary;
+        border-radius: 0px 10px 10px 0px;
+        @include flexCenter;
+       height: 100%;
+        margin-right: -75px;
+        width:75px;
+        transition-duration: 1s;
+    }
+    &:hover > .legende {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+    }
+    
+    &:hover > .hover-item {
+        margin-right: 0px;
+    }
+    &:hover .fa-check-circle {
+        transition: all 0.5s 0.5s;
+       transform: rotate(360deg);
+    }
+   
+}
+
+
+
+
