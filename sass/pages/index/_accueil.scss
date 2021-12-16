@@ -1,0 +1,114 @@
+.search-city {
+    background-color: rgb(240, 235, 235);	
+    @include flexCenter;
+	margin: auto;
+	padding: 20px 0;
+
+.search-city_input {
+		background-color: rgb(240, 234, 234);
+		border: none;
+		text-align: center;
+		font-weight: bold;
+		}
+		
+}
+// section introduction 
+.service-introduction {
+	background-color: $backbleu;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	&_title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 20px 15px 20px;
+		h1{
+			justify-content: center;
+		}
+	}
+	.service-introduction_paragraph {
+		display: flex;
+	flex-direction: column;
+	p{
+	justify-content: center;
+	}
+	}
+	.service-introduction_link {
+		@include button;
+	}
+}
+
+
+.fonctioning {
+	padding: 25px 40px 25px 25px;
+	@include flexColumn;
+	
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	.fonctioning_item {
+		width: 100%;
+		padding: 10px;
+		@include flexRow;
+		justify-content: space-between;
+		border: 1px solid $backlight-violet;
+		border-radius: 12px;
+		background-color: $backbleu;
+		transform: translateX(15px);
+		@include first-box-shadows;
+		transition: all 1s;
+
+		&:hover{
+			@include box-shadows-hover;
+		background-color: $backlight-violet;
+		}
+
+		.num{
+			width:30px;
+			height: 30px;
+			color: $white;
+			background-color: $colour-primary;
+			border-radius: 50px;
+			text-align: center;
+			@include vertical-center;
+			transform: translateX(15px);
+			margin-left: -40px;
+		}
+		.details{
+			@include flexRow;
+			justify-content: center;
+			flex: 1;
+			.icone{
+				width: 40px;
+				height: 100%;
+				color: #7e7e77;
+				@include vertical-center;
+				align-items: center;
+				&:hover {
+					@include first-box-shadows;
+					background-color: #F5EDFF;
+					i {
+						color: $colour-primary;
+					}
+				}
+			}
+			.text{
+				color: black;
+				height: 100%;
+				@include vertical-center;
+				align-items: center;
+				
+				font-weight: 600;
+			}
+			
+			
+			
+		}
+	
+}
+
+}

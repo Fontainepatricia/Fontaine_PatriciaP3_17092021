@@ -1,0 +1,19 @@
+{
+  "name": "OhmyFood",
+  "version": "14.16.1",
+  "description": "Entreprise de commande de repas en ligne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/myfood.scss:public/css/myfood.css -w --style compressed",
+    "prefix": "postcss --watch public/css/myfood.css --use autoprefixer -d public/css/prefixed/"
+  },
+  "author": "fontaine patricia",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "dependencies": {
+    "autoprefixer": "^10.3.6",
+    "install-peers": "^1.0.3",
+    "postcss": "^8.1.0",
+    "postcss-cli": "^9.0.1"
+  }
+}

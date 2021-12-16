@@ -1,0 +1,28 @@
+.header{
+    width: 100%; 
+    height: 70px;
+    @include flexCenter;
+
+}
+.header_logo {
+    font-family: $logo-title-font; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0px;
+    width: 100%;
+
+    .logo{
+        flex: 1;
+        @include flexCenter;
+       
+    }
+}
+
+.header_icon {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    font-size: 1.5rem;
+
+}

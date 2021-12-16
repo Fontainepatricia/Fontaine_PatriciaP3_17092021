@@ -1,0 +1,67 @@
+.restaurant-choice {
+	padding: 25px 25px 25px 25px;
+	background-color: $backbleu;
+	@include flexColumn;
+	
+	.list-restaurant{
+
+		
+		@include flexRow;
+		flex-wrap: wrap;
+		    justify-content: space-between;
+		@media screen and (max-width: 992px) {
+			@include flexColumn;
+		}
+		.card-restaurant{
+			width: 45%;
+			@media screen and (max-width: 992px) {
+				width: 100%;
+			}
+			height: 255px;
+			background: $white;
+			padding: 4px;
+			border-radius: 20px;
+			gap:0px;
+			box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.19);
+			@include flexColumn;
+			
+			.img-restaurant{
+
+                display:flex;
+				position: relative;
+				height: 70%;
+				img{
+					display: flex;
+					height: 100%;
+				    width: 100%;
+					object-fit: cover;
+	                border-radius: 15px 15px 0 0;
+				
+				}
+
+				.new-banner {
+					position: absolute;
+					top: 25px;
+					right: 25px;
+					background: $colour-tertiary;
+					color: $ColorBanner;
+					padding: 5px 10px;
+					border-radius: 3px;
+				}
+			}
+			.detail-restaurant{
+				
+				@include flexRow;
+				@include flexBetwenn;
+				padding:10px;
+				.titre-restaurant{
+					@include flexColumn;
+				}
+				
+			}
+		}
+	}
+}
+
+
+
