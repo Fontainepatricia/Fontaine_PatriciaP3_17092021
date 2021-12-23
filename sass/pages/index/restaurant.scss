@@ -53,11 +53,24 @@
 				
 				@include flexRow;
 				@include flexBetwenn;
+				position: relative;
 				padding:10px;
 				.titre-restaurant{
 					@include flexColumn;
 				}
-				
+				.heart-icon {
+					@include heart-icon;
+					
+					.empty, 
+					.full {
+						position: absolute;
+						top: 25px;
+						right: 10px;
+					}
+					&:hover {
+						cursor: pointer;
+					}
+				}
 			}
 		}
 	}
