@@ -125,18 +125,29 @@
 
     .legende{
 
+        padding: 10px;
         @include flexColumn;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
-        padding-left: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+       
 
      &_content {
+         display: unset;
         font-weight: 300;
-        overflow: hidden;
+        margin-block: 0px;
+       white-space: nowrap;
         text-overflow: ellipsis;
+        overflow: hidden;
+        
+       }
+       &_title {
+        display: unset;
         white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-block: 0px;
        }
     }
     .menu-item_price {
@@ -159,10 +170,9 @@
         transition-duration: 1s;
     }
     &:hover > .legende {
-        overflow: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
-        
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     
     &:hover > .hover-item {
